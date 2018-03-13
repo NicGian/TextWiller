@@ -35,9 +35,7 @@
   tot_matches = p + n
   if (tot_matches > 0) {
   score = sign( p - n ) / tot_matches
-    else
-      score = sign( p - n )
-    }
+  } else score = sign( p - n )
   return(as.array(as.vector(score)))  
 }
 scores = sapply(text, .get.scores, vocabularies$positive, vocabularies$negative)
